@@ -1,7 +1,12 @@
 <?php
 
+use App\Http\Controllers\DepartmentController;
+use App\Http\Controllers\SubjectController;
+use App\Models\Subject;
 use App\Models\Department;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Redirect;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,7 +23,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('departments', function () {
-    $departments = Department::get();
-    return view('departments', ['departments' => $departments]);
-});
+
+
+
+
+
+
+
+
+Route::resource('/subjects', SubjectController::class);
+
+
+Route::resource('/departments', DepartmentController::class);
