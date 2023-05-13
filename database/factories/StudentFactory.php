@@ -17,13 +17,14 @@ class StudentFactory extends Factory
      */
     public function definition() : array
     {   
+        /*
         $name= fake()->name();
         $fake = str_replace(' ', '', $name);
         return [
             'username' =>  $fake,
             'academic_number' => $fake.'@menofia.edu.eg',
             'password' => '123456789'// password
-        ];
+        ]; */
     }
 }
 ?>

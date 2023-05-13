@@ -19,7 +19,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
 
-      Student::factory(30)->create();
+     // Student::factory(30)->create();
 /*
         Department::create([
            'name' => 'Information Technology',
