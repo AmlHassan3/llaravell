@@ -1,3 +1,4 @@
+@include('header')
 @extends('base')
 @section('content')
     <form action="{{ route('subjects.update', $subject->id) }}" method="POST">

@@ -1,3 +1,4 @@
+@include('header')
 @extends('base')
 @section('content')
     <h1>
@@ -11,4 +12,6 @@
     <h3>
         {{ $subject->department->name }}
     </h3>
+
+
 @endsection

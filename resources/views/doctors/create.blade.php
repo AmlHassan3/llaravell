@@ -1,3 +1,4 @@
+@include('header')
 @extends('base')
 @section('content')
     <form action="/doctors" method="POST">
