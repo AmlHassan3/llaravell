@@ -1,7 +1,6 @@
+@include('header')
 @extends('base')
 @section('content')
-
-
 
     <div>
         <center>
@@ -28,7 +27,7 @@
                             alt="Department" style="width:400px;height:300px">
                         <div class="container">
                             <h4><b>
-                                    <a href="{{ route('departments.index') }}"style="color:#352CB9">
+                                    <a href="{{ route('departments.index') }}"style="color:#352CB9" >
                                         Department Page </a>
                                 </b>
                             </h4>
@@ -40,7 +39,7 @@
                             alt="Subject" style="width:400px;height:300px">
                         <div class="container">
                             <h4><b>
-                                    <a href="{{ route('subjects.index') }}"style="color: #352CB9">
+                                    <a href="{{ route('subjects.index') }}"style="color: #352CB9" >
                                         Subject Page </a>
                                 </b>
                             </h4>

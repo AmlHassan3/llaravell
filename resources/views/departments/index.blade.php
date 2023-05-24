@@ -1,3 +1,4 @@
+@include('header')
 @extends('base')
 @section('content')
     @if (session('status'))

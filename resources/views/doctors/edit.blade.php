@@ -1,3 +1,4 @@
+@include('header')
 @extends('base')
 @section('content')
     <form action="{{ route('doctors.update', $doctor->id) }}" method="POST">
