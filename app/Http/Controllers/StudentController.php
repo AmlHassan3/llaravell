@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Student;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Validator;
@@ -101,4 +102,10 @@ class StudentController extends Controller
         $student->delete();
         return Redirect::route('students.index')->with('status','Deleting A Student had done Succesfully!');
     }
+
+    // public function showRegistrationForm()
+    // {
+    //     $subjects = DB::table('subjects')->get(); // استرجاع جميع المواد من قاعدة البيانات
+    //     return view('students.registration', compact('subjects'));
+    // }
 }
