@@ -11,6 +11,11 @@
 </head>
 
 <body>
+
+    <header style="background-color: #132b4d; text-align: center; color: white; font-size: 70px;">
+        Menofia University
+    </header>
+
     <div class="container">
         @yield('content')
     </div>
