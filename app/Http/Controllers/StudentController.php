@@ -42,9 +42,8 @@ class StudentController extends Controller
         $formFields = $request ->validate([
             'username' => 'required' ,
             'password' => ['required', 'string', 'min:8'],
-            'academic_number' => ['required', 'ends_with:@menofia.edu.eg',
+            'academic_number' => ['required', 'ends_with:@menofia.edu.eg'],
             'subject_id' =>'nullable'
-            ] 
         ]);
         Student::create($formFields);
     
