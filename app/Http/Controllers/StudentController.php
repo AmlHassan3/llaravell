@@ -42,7 +42,9 @@ class StudentController extends Controller
         $formFields = $request ->validate([
             'username' => 'required' ,
             'password' => ['required', 'string', 'min:8'],
-            'academic_number' => ['required', 'ends_with:@menofia.edu.eg'] 
+            'academic_number' => ['required', 'ends_with:@menofia.edu.eg',
+            'subject_id' =>'nullable'
+            ] 
         ]);
         Student::create($formFields);
     
@@ -55,8 +57,9 @@ class StudentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Student $student)
+    public function show(string $id)
     {
+       $student = Student::where('id' ,'=', $id )->with('subject')->first();
         return view ('students.show' , ['student' => $student]); 
     }
 
@@ -78,12 +81,22 @@ class StudentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+    public function register_subject(string $id)
+    {
+
+        $student = ['subject_id' => $id]; 
+        $student->update();
+        return Redirect::route('students.show' , $student->id);
+    }
+
     public function update(Request $request,Student $student)
     {
         $formFields = $request ->validate([
             'username' => 'required' ,
             'password' => ['required', 'string', 'min:8'] ,
-            'academic_number' => ['required', 'ends_with:@menofia.edu.eg']
+            'academic_number' => ['required', 'ends_with:@menofia.edu.eg',
+            'stubject_id' =>'nullable'
+            ]
         ]);
         $student->update($formFields);
         

@@ -9,7 +9,7 @@ class Subject extends Model
 {
     use HasFactory;
 
-    protected $fillable =  ['name','code','department_id'];
+    protected $fillable =  ['name','code','department_id','pre_requisites'];
 
     public function department(){
         return $this->hasOne(Department::class,'id','department_id');

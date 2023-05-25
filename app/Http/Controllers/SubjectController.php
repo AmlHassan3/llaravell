@@ -43,7 +43,8 @@ class SubjectController extends Controller
         $formFields = $request->validate([
             'name' => 'required',
             'code' => 'required',
-            'department_id' => 'required'
+            'department_id' => 'required',
+            'pre_requisites' => 'nullable'
         ]);
     
         Subject::create($formFields);
@@ -87,7 +88,8 @@ class SubjectController extends Controller
         $formFields = $request->validate([
             'name' => 'required',
             'code' => 'required',
-            'department_id' => 'required'
+            'department_id' => 'required',
+            'pre_requisites' => 'nullable'
         ]);
         $subject->update($formFields);
         return Redirect::route('subjects.show', $subject->id);

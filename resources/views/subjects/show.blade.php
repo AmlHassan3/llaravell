@@ -1,14 +1,24 @@
 @extends('base')
 @section('content')
+    <form action="" method="POST">
     <h1>
-        {{ $subject->name }}
+        {{"Subject Name : " . $subject->name }}
     </h1>
 
-    {{ $subject->code }}
-
-
+    {{ "Subject Code : ". $subject->code }}
 
     <h3>
-        {{ $subject->department->name }}
+        {{ "Subject Department : ". $subject->department->name }}
     </h3>
+    <h3>
+        {{ "Pervious Requirement : ". $subject->pre_requisites }}
+    </h3>
+    
+        @csrf
+        <button type="submit" class="btn btn-primary">Register Subject</button>
+    </form>
+    <button class="btn btn-success mt-4" type="submit">
+        Delete Subject
+    </button>
+    
 @endsection

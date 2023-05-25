@@ -1,10 +1,13 @@
 @extends('base')
 @section('content')
     <h1>
-        {{ $student->username }}
-    </h1>
+        {{"Name :". $student->username }}
+    </h1> 
 
     <h3>
-        {{ $student->academic_number }}
+        {{"Code :" . $student->academic_number }}
+    </h3>
+    <h3>
+        {{"Subject :". $student->subject->name }}
     </h3>
 @endsection

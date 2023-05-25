@@ -22,7 +22,8 @@ class StudentFactory extends Factory
         return [
             'username' =>  $fake,
             'academic_number' => $fake.'@menofia.edu.eg',
-            'password' => '123456789'// password
+            'password' => '123456789',// password
+            'subject_id' => ''
         ];
     }
 }

@@ -23,6 +23,16 @@
             @enderror
 
         </div>
+        <div>
+            <label>pre_requisites</label>
+            <input class="form-control" type="text" name="pre_requisites" value="{{ $subject->pre_requisites }}">
+            @error('pre_requisites')
+                <div class="alert alert-danger">
+                    {{ $message }}
+                </div>
+            @enderror
+
+        </div>
 
         <div>
             <label>Department</label>
